@@ -73,10 +73,6 @@ app.post('/login', tokenFromJWT, routes.login );
 app.post('/logout', routes.logout );
 
 // Custom Activity Routes for interacting with Desk.com API
-app.post('/ixn/activities/create-case/save/', activityCreate.save );
-app.post('/ixn/activities/create-case/validate/', activityCreate.validate );
-app.post('/ixn/activities/create-case/publish/', activityCreate.publish );
-app.post('/ixn/activities/create-case/execute/', activityCreate.execute );
 
 app.post('/ixn/activities/update-case/save/', activityUpdate.save );
 app.post('/ixn/activities/update-case/validate/', activityUpdate.validate );
