@@ -2,8 +2,8 @@
     "workflowApiVersion": "1.0",
     "metaData": {
         "version": "2.0",
-        "icon": "images/sms.jpg",
-        "iconSmall": "images/smsSmall.jpg"
+        "icon": "images/sms.png",
+        "iconSmall": "images/smsSmall.png"
     },
     "type": "REST",
     "lang": {
