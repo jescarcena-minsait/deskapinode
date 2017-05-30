@@ -107,12 +107,14 @@ define( function( require ) {
 		$('.step').hide();
         switch(step) {
             case 1:
-                $('#step1').show();
+            	alert("Paso 7a");  
+            	$('#step1').show();
                 connection.trigger('updateButton', { button: 'next', text: 'next', enabled: Boolean(getPriority()) });
                 connection.trigger('updateButton', { button: 'back', visible: false });
                 break;
             case 2:
-                $('#step2').show();
+            	alert("Paso 7b");  
+            	$('#step2').show();
                 $('#showPriority').html(getPriority());
                 connection.trigger('updateButton', { button: 'back', visible: true });
                 connection.trigger('updateButton', { button: 'next', text: 'done', visible: true });
