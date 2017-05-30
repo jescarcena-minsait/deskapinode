@@ -1,0 +1,58 @@
+{
+    "workflowApiVersion": "1.0",
+    "metaData": {
+        "version": "2.0",
+        "icon": "images/sms.png",
+        "iconSmall": "images/smsSmall.png"
+    },
+    "type": "REST",
+    "lang": {
+        "en-US": {
+            "name": "Minsait SMS",
+            "description": "Activity for updating a case via Desk.com API."
+        }
+    },
+    "arguments": {
+        "execute": {     	
+			"inArguments":[	
+				{ "caseID":"{{Interaction.jescarcena-jb-example-activity-desk-update-case.caseID}}" }
+			],        	
+            "outArguments": [				
+			],
+			"url": "https://minsaitjescarcenadeskapi.herokuapp.com/ixn/activities/update-case/execute/",
+            "verb": "POST",
+            "body": "",
+            "header": "",
+            "format": "json",
+            "useJwt": false,
+            "timeout": 10000
+        }
+    },
+    "configurationArguments": {
+    	"applicationExtensionKey": "jescarcena-jb-example-activity-desk-update-case",
+        "defaults": { },     
+        "save": {
+        	"url": "https://minsaitjescarcenadeskapi.herokuapp.com/ixn/activities/update-case/save/",
+            "body": "",
+            "verb": "POST",
+            "useJwt": false
+        },
+        "publish": {
+        	"url": "https://minsaitjescarcenadeskapi.herokuapp.com/ixn/activities/update-case/publish/",
+            "verb": "POST",
+            "body": "",
+            "useJwt": false
+        },
+        "validate": {
+        	"url": "https://minsaitjescarcenadeskapi.herokuapp.com/ixn/activities/update-case/validate/",
+            "verb": "POST",
+            "body": "",
+            "useJwt": false            
+        }
+    },
+    "edit": {
+    	"url": "https://minsaitjescarcenadeskapi.herokuapp.com/ixn/activities/update-case/",
+        "height": 400,
+        "width": 500
+    }
+}
