@@ -46,6 +46,7 @@ define( function( require ) {
 
 		$('#selectPriority').find('option[value='+ priority +']').attr('selected', 'selected');		
 		gotoStep(step);
+		alert("Paso 11");
         
     });
 
@@ -55,7 +56,8 @@ define( function( require ) {
 			console.error( data.error );
 		} else {
 			tokens = data;
-		}        
+		}       
+		alert("Paso 21");
     });
 
     connection.on('requestedEndpoints', function(data) {
@@ -64,7 +66,8 @@ define( function( require ) {
 			console.error( data.error );
 		} else {
 			endpoints = data;
-		}        
+		}     
+		alert("Paso 31");
     });
 
     connection.on('clickedNext', function() {
@@ -72,6 +75,7 @@ define( function( require ) {
 		step++;
         gotoStep(step);
         connection.trigger('ready');
+        alert("Paso 41");
     });
 
     connection.on('clickedBack', function() {
@@ -79,6 +83,7 @@ define( function( require ) {
 		step--;
         gotoStep(step);
         connection.trigger('ready');
+        alert("Paso 51");
     });
 
     function onRender() {
@@ -93,6 +98,7 @@ define( function( require ) {
             var priority = getPriority();
             connection.trigger('updateButton', { button: 'next', enabled: Boolean(priority) });
         });
+        alert("Paso 61");
     };
 
     function gotoStep(step) {
@@ -114,11 +120,13 @@ define( function( require ) {
                 save();
                 break;
         }
+        alert("Paso 71");   
     };
 
     function getPriority() {
         alert("Paso 8");
 		return $('#selectPriority').find('option:selected').attr('value').trim();
+		alert("Paso 81");
     };
 
     function save() {
@@ -142,6 +150,7 @@ define( function( require ) {
 		
 		toJbPayload.metaData.isConfigured = true;  //this is required by JB to set the activity as Configured.
         connection.trigger('updateActivity', toJbPayload);
+        alert("Paso 91");
     }; 
     	 
 });
