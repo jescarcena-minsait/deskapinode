@@ -16,6 +16,7 @@ define( function( require ) {
     connection.on('initActivity', function(payload) {
         var priority;
 
+		alert("Paso 1");
         if (payload) {
             toJbPayload = payload;
             console.log('payload',payload);
@@ -47,6 +48,7 @@ define( function( require ) {
     });
 
     connection.on('requestedTokens', function(data) {
+		alert("Paso 2");
 		if( data.error ) {
 			console.error( data.error );
 		} else {
@@ -55,6 +57,7 @@ define( function( require ) {
     });
 
     connection.on('requestedEndpoints', function(data) {
+		alert("Paso 3");
 		if( data.error ) {
 			console.error( data.error );
 		} else {
@@ -63,19 +66,22 @@ define( function( require ) {
     });
 
     connection.on('clickedNext', function() {
-        step++;
+        alert("Paso 4");
+		step++;
         gotoStep(step);
         connection.trigger('ready');
     });
 
     connection.on('clickedBack', function() {
-        step--;
+        alert("Paso 5");
+		step--;
         gotoStep(step);
         connection.trigger('ready');
     });
 
     function onRender() {
-        connection.trigger('ready');
+        alert("Paso 6");
+		connection.trigger('ready');
 
         connection.trigger('requestTokens');
         connection.trigger('requestEndpoints');
@@ -88,7 +94,8 @@ define( function( require ) {
     };
 
     function gotoStep(step) {
-        $('.step').hide();
+		alert("Paso 7");       
+		$('.step').hide();
         switch(step) {
             case 1:
                 $('#step1').show();
@@ -108,11 +115,12 @@ define( function( require ) {
     };
 
     function getPriority() {
-        return $('#selectPriority').find('option:selected').attr('value').trim();
+        alert("Paso 8");
+		return $('#selectPriority').find('option:selected').attr('value').trim();
     };
 
     function save() {
-
+		alert("Paso 9");
         var value = getPriority();
 
         // toJbPayload is initialized on populateFields above.  Journey Builder sends an initial payload with defaults
