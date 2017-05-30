@@ -15,11 +15,11 @@
     "arguments": {
         "execute": {     	
 			"inArguments":[	
-				{ "caseID":"{{Interaction.jescarcena-jb-example-activity-desk-update-case.caseID}}" }
+				{ "caseID":"{{Interaction.jescarcena-jb-example-activity-desk-create-case.caseID}}" }
 			],        	
             "outArguments": [				
 			],
-			"url": "https://minsaitjescarcenadeskapi.herokuapp.com/ixn/activities/update-case/execute/",
+			"url": "https://minsaitjescarcenadeskapi.herokuapp.com/ixn/activities/create-case/execute/",
             "verb": "POST",
             "body": "",
             "header": "",
@@ -32,26 +32,26 @@
     	"applicationExtensionKey": "jescarcena-jb-example-activity-desk-update-case",
         "defaults": { "priority": "4" },     
         "save": {
-        	"url": "https://minsaitjescarcenadeskapi.herokuapp.com/ixn/activities/update-case/save/",
+        	"url": "https://minsaitjescarcenadeskapi.herokuapp.com/ixn/activities/create-case/save/",
             "body": "",
             "verb": "POST",
             "useJwt": false
         },
         "publish": {
-        	"url": "https://minsaitjescarcenadeskapi.herokuapp.com/ixn/activities/update-case/publish/",
+        	"url": "https://minsaitjescarcenadeskapi.herokuapp.com/ixn/activities/create-case/publish/",
             "verb": "POST",
             "body": "",
             "useJwt": false
         },
         "validate": {
-        	"url": "https://minsaitjescarcenadeskapi.herokuapp.com/ixn/activities/update-case/validate/",
+        	"url": "https://minsaitjescarcenadeskapi.herokuapp.com/ixn/activities/create-case/validate/",
             "verb": "POST",
             "body": "",
             "useJwt": false            
         }
     },
     "edit": {
-    	"url": "https://minsaitjescarcenadeskapi.herokuapp.com/ixn/activities/update-case/",
+    	"url": "https://minsaitjescarcenadeskapi.herokuapp.com/ixn/activities/create-case/",
         "height": 400,
         "width": 500
     }

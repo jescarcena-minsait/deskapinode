@@ -7,13 +7,13 @@ requirejs.config({
         'vendor/jquery.min': {
             exports: '$'
         },
-		'UpdateCase': {
+		'CreateCase': {
 			deps: ['vendor/jquery.min', 'vendor/postmonger']
 		}
     }
 });
 
-requirejs( ['vendor/jquery.min', 'UpdateCase'], function( $, UpdateCase ) {
+requirejs( ['vendor/jquery.min', 'CreateCase'], function( $, CreateCase ) {
 	//console.log( 'REQUIRE LOADED' );
 });
 
