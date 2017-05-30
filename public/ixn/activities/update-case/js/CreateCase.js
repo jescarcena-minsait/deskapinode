@@ -108,7 +108,7 @@ define( function( require ) {
         switch(step) {
             case 1:
             	alert("Paso 7a");  
-            	$('#step2').show();
+            	$('#step1').show();
                 connection.trigger('updateButton', { button: 'next', text: 'next', enabled: Boolean(getPriority()) });
                 connection.trigger('updateButton', { button: 'back', visible: false });
                 break;
