@@ -11,7 +11,9 @@ define( function( require ) {
 	var tokens;
 	var endpoints;
 	
-    $(window).ready(onRender);
+	alert("Paso 0");
+	$(window).ready(onRender);
+	alert("Paso 10");
 
     connection.on('initActivity', function(payload) {
         var priority;
