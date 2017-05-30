@@ -30,7 +30,7 @@
     },
     "configurationArguments": {
     	"applicationExtensionKey": "jescarcena-jb-example-activity-desk-update-case",
-        "defaults": { },     
+        "defaults": {"priority": "4"},     
         "save": {
         	"url": "https://minsaitjescarcenadeskapi.herokuapp.com/ixn/activities/update-case/save/",
             "body": "",
