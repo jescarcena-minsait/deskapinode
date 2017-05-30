@@ -37,6 +37,7 @@ define( function( require ) {
         
 		$.get( "/version", function( data ) {
 			$('#version').html('Version: ' + data.version);
+			alert("Version: "+data.version);
 		});                
 
         // If there is no priority selected, disable the next button
