@@ -9,9 +9,9 @@ var request     = require('request');
 var routes      = require('./routes');
 var pkgjson = require( './package.json' );
 
-var routes_jescarcena = require('./routes_jescarcena');
-var activityCreateFile   = require('./routes_jescarcena/createFile');
-var activityUtilsJescarcena    = require('./routes_jescarcena/activityUtils');
+var routes_jescarcena = require('./routes');
+var activityCreateFile   = require('./routes/createFile');
+var activityUtilsJescarcena    = require('./routes/activityUtils');
 
 var app = express();
 
