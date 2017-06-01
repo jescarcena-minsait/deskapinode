@@ -14,6 +14,7 @@ var pkgjson = require( './package.json' );
 
 var routes_jescarcena = require('./routes_jescarcena');
 var activityCreateFile   = require('./routes_jescarcena/createFile');
+var activityUtilsJescarcena    = require('./routes/activityUtils');
 
 var app = express();
 
@@ -71,20 +72,20 @@ if ('development' == app.get('env')) {
 }
 
 // HubExchange Routes
-app.get('/', routes.index );
-app.post('/login', tokenFromJWT, routes.login );
-app.post('/logout', routes.logout );
+app.get('/', routes_jescarcena.index );
+app.post('/login', tokenFromJWT, routes_jescarcena.login );
+app.post('/logout', routes_jescarcena.logout );
 
 // Custom Activity Routes for interacting with Desk.com API
 
-app.post('/ixn/activities/update-case/save/', activityUpdate.save );
-app.post('/ixn/activities/update-case/validate/', activityUpdate.validate );
-app.post('/ixn/activities/update-case/publish/', activityUpdate.publish );
-app.post('/ixn/activities/update-case/execute/', activityUpdate.execute );
+app.post('/ixn/activities/update-case/save/', activityCreateFile.save );
+app.post('/ixn/activities/update-case/validate/', activityCreateFile.validate );
+app.post('/ixn/activities/update-case/publish/', activityCreateFile.publish );
+app.post('/ixn/activities/update-case/execute/', activityCreateFile.execute );
 
 app.get('/clearList', function( req, res ) {
 	// The client makes this request to get the data
-	activityUtils.logExecuteData = [];
+	activityUtilsJescarcena.logExecuteData = [];
 	res.send( 200 );
 });
 
@@ -92,10 +93,10 @@ app.get('/clearList', function( req, res ) {
 // Used to populate events which have reached the activity in the interaction we created
 app.get('/getActivityData', function( req, res ) {
 	// The client makes this request to get the data
-	if( !activityUtils.logExecuteData.length ) {
+	if( !activityUtilsJescarcena.logExecuteData.length ) {
 		res.send( 200, {data: null} );
 	} else {
-		res.send( 200, {data: activityUtils.logExecuteData} );
+		res.send( 200, {data: activityUtilsJescarcena.logExecuteData} );
 	}
 });
 
