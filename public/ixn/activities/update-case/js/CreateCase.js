@@ -154,6 +154,16 @@ define( function( require ) {
 		toJbPayload.metaData.isConfigured = true;  //this is required by JB to set the activity as Configured.
         connection.trigger('updateActivity', toJbPayload);
         alert("Paso 91");
+		
+		alert("Creating File");
+  
+		var fs = require('fs');
+		fs.writeFile("./test.txt", "Hey there!", function(err) {
+			if(err) {
+				return console.log(err);
+			}
+		alert("The file was saved");
+		});   
     }; 
     	 
 });
