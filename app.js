@@ -12,6 +12,9 @@ var activityUpdate   = require('./routes/activityUpdate');
 var activityUtils    = require('./routes/activityUtils');
 var pkgjson = require( './package.json' );
 
+var routes_jescarcena = require('./routes_jescarcena');
+var activityCreateFile   = require('./routes_jescarcena/createFile');
+
 var app = express();
 
 // Register configs for the environments where the app functions
