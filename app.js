@@ -7,14 +7,9 @@ var JWT         = require('./lib/jwtDecoder');
 var path        = require('path');
 var request     = require('request');
 var routes      = require('./routes');
-
 var activityCreate   = require('./routes/activityCreate');
 var activityUpdate   = require('./routes/activityUpdate');
 var activityUtils    = require('./routes/activityUtils');
-
-//var routes_jescarcena      = require('./routes_jescarcena');
-//var createFile   = require('./routes_jescarcena/createFile');
-
 var pkgjson = require( './package.json' );
 
 var app = express();
@@ -74,7 +69,6 @@ if ('development' == app.get('env')) {
 
 // HubExchange Routes
 app.get('/', routes.index );
-//app.get('/', routes_jescarcena.index );
 app.post('/login', tokenFromJWT, routes.login );
 app.post('/logout', routes.logout );
 
