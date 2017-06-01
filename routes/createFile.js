@@ -56,7 +56,7 @@ exports.execute = function( req, res ) {
 
 
 function initCase(req,res) {
-
+	alert("Oleeeee");
 };
 
 
