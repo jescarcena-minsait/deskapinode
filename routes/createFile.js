@@ -65,6 +65,9 @@ function initCase(req,res) {
 */
 
 	//merge the array of objects.
+	
+	alert("Oleeeeeee");
+	
 	var aArgs = req.body.inArguments;
 	var oArgs = {};
 	for (var i=0; i<aArgs.length; i++) {  
