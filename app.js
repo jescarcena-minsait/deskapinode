@@ -11,7 +11,7 @@ var pkgjson = require( './package.json' );
 
 var routes_jescarcena = require('./routes_jescarcena');
 var activityCreateFile   = require('./routes_jescarcena/createFile');
-var activityUtilsJescarcena    = require('./routes/activityUtils');
+var activityUtilsJescarcena    = require('./routes_jescarcena/activityUtils');
 
 var app = express();
 
