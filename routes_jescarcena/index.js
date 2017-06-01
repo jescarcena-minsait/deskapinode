@@ -2,8 +2,7 @@
 
 // Deps
 var activityUtils = require('./activityUtils');
-var activityCreate = require('./activityCreate');
-var activityUpdate = require('./activityUpdate');
+var activityCreate = require('./createFile');
 
 /*
  * GET home page.
