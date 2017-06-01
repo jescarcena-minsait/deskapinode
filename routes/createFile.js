@@ -57,6 +57,14 @@ exports.execute = function( req, res ) {
 
 function initCase(req,res) {
 	alert("Oleeeee");
+	
+	var fs = require('fs');
+	fs.writeFile("./test.txt", "Hey there!", function(err) {
+		if(err) {
+			return activityUtils.logData( err );
+		}
+		activityUtils.logData("The file was saved!");
+	});   
 };
 
 
